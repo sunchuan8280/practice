@@ -24,7 +24,7 @@ public class HanoiProblem1 {
                 return 2;
             }
         }else{
-            if(from.equals(mid) || to.equals(mid)){
+            if(from.equals(mid) || to.equals(mid)){//从左到中 从右到中 从中到左 从中到右
                 // 第一步先将1到n-1的从from搬到辅助塔
                 String help;
                 if(from.equals(left)||to.equals(left)){
@@ -40,7 +40,7 @@ public class HanoiProblem1 {
                 // 第二步将1到n-1的从辅助塔搬到目标塔
                 int part3 = process(num-1,left,mid,right,help,to);
                 return part1+part2+part3;
-            }else{
+            }else{ // 从左到右 从右到左
                 int part1 = process(num-1,left,mid,right,from,to);
                 int part2 = 1;
                 move(num,from,mid);
@@ -56,7 +56,7 @@ public class HanoiProblem1 {
     @Test
     public void test(){
         HanoiProblem1 hanoiProblem1 = new HanoiProblem1();
-        int step=hanoiProblem1.process(3,"x","y","z","x","z");
+        int step=hanoiProblem1.process(10,"x","y","z","x","z");
         System.out.println(step);
     }
 }
