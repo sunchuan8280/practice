@@ -30,11 +30,18 @@ public class QmaxQmin {
                     }
                     qmax.addLast(j);
 
-                    if(arr[qmax.getFirst()]-arr[qmin.getFirst()]>num){
+                    int qmaxfirst=qmax.getFirst();
+                    int qminfirst=qmin.getFirst();
+
+                    if(arr[qmaxfirst]-arr[qminfirst]>num){
                         break;
                     }
                     j++;
+
             }
+
+
+            //此时i已经失效了
             if(qmin.peekFirst()==i){
                 qmin.pollFirst();
             }
@@ -50,6 +57,7 @@ public class QmaxQmin {
     }
     @Test
     public void test(){
+        //子数组包含自身且需要连续
         int[] arr=new int[]{1,3,2,7,6};
         QmaxQmin qmaxQmin=new QmaxQmin();
        int res=qmaxQmin.getNum(arr,1);
