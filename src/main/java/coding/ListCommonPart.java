@@ -44,11 +44,3 @@ public class ListCommonPart {
         new ListCommonPart().printListCommonPart(head1,head2);
     }
 }
-
-class Node{
-    public int value;
-    public Node next;
-    public Node(int data){
-        this.value=data;
-    }
-}
