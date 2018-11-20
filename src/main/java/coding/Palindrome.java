@@ -10,7 +10,7 @@ public class Palindrome {
         Stack<Node> stack = new Stack<>();
         Node cur=head;
         while(cur!=null){
-            stack.peek(cur.value);
+            stack.push(cur.next);
             cur=cur.next;
         }
         while(head!=null){
