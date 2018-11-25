@@ -48,7 +48,7 @@ public class AddLists {
 
     }
 
-    public Node addLists1(Node head1,Node head2){
+    public Node addLists2(Node head1,Node head2){
         head1=reverseList(head1);
         head2=reverseList(head2);
         int ca=0;
