@@ -1,5 +1,6 @@
 package rmi;
 
+import javax.crypto.Cipher;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -10,6 +11,8 @@ import java.rmi.RemoteException;
  */
 public class WarehouseServer {
     public static void main(String[] args) throws RemoteException,NamingException{
+
+
         System.out.println("Constructing server implementation....");
         WarehouseImpl centralWarehouse=new WarehouseImpl();
         System.out.println("Binding server implementation to registry...");
