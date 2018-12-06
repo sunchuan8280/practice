@@ -48,4 +48,47 @@ public class ReverseNodes1 {
         next.next=right;
         return next;
     }
+
+
+    public Node reverseNode2(Node head,int k){
+        if(k<2){
+            return head;
+        }
+        Node cur=head;
+        Node next=null;
+        Node pre=null;
+        Node start=null;
+        int count=1;
+        while(cur!=null){
+            next=cur.next;
+            if(count==k){
+                start=pre==null?head:pre.next;
+                head=pre==null?cur:head;
+                resign2(pre,next,start,cur);
+                pre=start;
+                count=0;
+            }
+            count++;
+            cur=next;
+        }
+        return head;
+    }
+
+    public void resign2(Node left,Node right,Node start,Node end){
+          Node pre=start;
+          Node cur=start.next;
+          Node next=null;
+          while(cur!=right){
+            next=cur.next;
+            cur.next=pre;
+            pre=cur;
+            cur=next;
+          }
+            if(left!=null){
+              left.next=end;
+            }
+            start.next=right;
+
+
+    }
 }
