@@ -1,7 +1,5 @@
-package coding;
+package coding.stack;
 
-import com.sun.corba.se.impl.orbutil.graph.Node;
-import com.sun.javafx.collections.MappingChange;
 import org.junit.Test;
 
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package coding;
+package coding.stack;
 
 import org.junit.Assert;
 import org.junit.Test;
