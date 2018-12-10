@@ -24,4 +24,30 @@ public class RemoveValue {
         }
         return head;
     }
+
+    /**
+     *找到第一个不等于num的作为头节点
+     * @param head
+     * @param num
+     * @return
+     */
+    public Node removeValue2(Node head,int num){
+            while(head!=null){
+                if(head.value!=num){
+                    break;
+                }
+                head=head.next;
+            }
+            Node pre=head;
+            Node cur=head;
+            while(cur!=null){
+                if(cur.value==num){
+                    pre.next=cur.next;
+                }else{
+                    pre=cur;
+                }
+                cur=cur.next;
+            }
+            return head;
+    }
 }
