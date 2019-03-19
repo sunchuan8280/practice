@@ -10,4 +10,9 @@ public class Node {
     public Node(int data) {
         this.value = data;
     }
+
+    @Override
+    public String toString() {
+        return String.valueOf(value);
+    }
 }
